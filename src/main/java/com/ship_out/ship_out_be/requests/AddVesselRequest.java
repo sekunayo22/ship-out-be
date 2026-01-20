@@ -15,4 +15,5 @@ public class AddVesselRequest {
     LocalDateTime eta;
     LocalDateTime ata;
     LocalDateTime atd;
+    Integer etdWeek;
 }

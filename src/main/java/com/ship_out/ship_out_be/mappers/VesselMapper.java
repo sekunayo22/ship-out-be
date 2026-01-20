@@ -24,6 +24,19 @@ public interface VesselMapper {
     @Mapping(target = "ata", source = "vessel.ata")
     @Mapping(target = "atd", source = "vessel.atd")
     VesselDto toDto(Vessel vessel);
+    
+    @Mapping(target = "id", ignore = true)
     Vessel toEntity(AddVesselRequest addVesselRequest);
+
+    @Mapping(target = "id", source = "updateVesselRequest.id")
+    @Mapping(target = "name", source = "updateVesselRequest.name")
+    @Mapping(target = "loop", source = "updateVesselRequest.loop")
+    @Mapping(target = "port", source = "updateVesselRequest.port")
+    @Mapping(target = "weekNum", source = "updateVesselRequest.weekNum")
+    @Mapping(target = "allocation", source = "updateVesselRequest.allocation")
+    @Mapping(target = "etd", source = "updateVesselRequest.etd")
+    @Mapping(target = "eta", source = "updateVesselRequest.eta")
+    @Mapping(target = "ata", source = "updateVesselRequest.ata")
+    @Mapping(target = "atd", source = "updateVesselRequest.atd")
     Vessel updateEntity(Vessel vessel, UpdateVesselRequest updateVesselRequest);
 }
