@@ -10,13 +10,14 @@ import org.mapstruct.Mapping;
 public interface AllocationRouteMapper {
 
     @Mapping(target = "voyage", source = "allocationRoute.voyage.id")
+    @Mapping(target = "serviceString", source = "allocationRoute.voyage.serviceString")
     @Mapping(target = "etdWeek", source = "allocationRoute.etdWeek")
     @Mapping(target = "quantity", source = "allocationRoute.quantity")
     @Mapping(target = "unit", source = "allocationRoute.unit")
     @Mapping(target = "utilization", source = "allocationRoute.utilization")
     @Mapping(target = "outstandingCommited", source = "allocationRoute.outstandingCommited")
     @Mapping(target = "id", source = "allocationRoute.id")
-    @Mapping(target = "vessel", source = "allocationRoute.vessel")
+    @Mapping(target = "vessel", source = "allocationRoute.voyage.vessel.name")
     @Mapping(target = "linkedScheduleEtd", source = "allocationRoute.linkedScheduleEtd")
     @Mapping(target = "linkedScheduleEta", source = "allocationRoute.linkedScheduleEta")
     AllocationRouteDto toDto(AllocationRoute allocationRoute);
