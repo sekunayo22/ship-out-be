@@ -17,9 +17,8 @@ public class AllocationRoute implements Serializable {
     @GeneratedValue(strategy = GenerationType.UUID)
     UUID id;
 
-    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "voyage_id")
     Voyage voyage;
 
     @NotNull

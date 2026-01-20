@@ -17,8 +17,7 @@ public class Allocation implements Serializable {
     @GeneratedValue(strategy=GenerationType.UUID)
     UUID id;
 
-    @NotNull
     @ManyToOne
-    @JoinColumn(name="id")
+    @JoinColumn(name = "allocation_route_id")
     AllocationRoute allocationRoute;
 }

@@ -17,9 +17,8 @@ public class Voyage implements Serializable {
     @GeneratedValue(strategy=GenerationType.UUID)
     UUID id;
 
-    @NotNull
     @ManyToOne
-    @JoinColumn(name="id")
+    @JoinColumn(name = "vessel_id")
     Vessel vessel;
 
     @NotNull

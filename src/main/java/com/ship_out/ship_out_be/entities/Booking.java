@@ -22,9 +22,7 @@ public class Booking implements Serializable {
     @NotNull
     String etdOrigin;
 
-    @NotNull
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(insertable = false, updatable = false)
     Long reference;
 
     @NotNull
@@ -34,11 +32,10 @@ public class Booking implements Serializable {
     String trans;
 
     @NotNull
+    @Enumerated(EnumType.STRING)
     ContainerEnum containerType;
 
-    @NotNull
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(insertable = false, updatable = false)
     Long masterBill;
 
     @NotNull
@@ -56,14 +53,12 @@ public class Booking implements Serializable {
     @NotNull
     String destination;
 
-    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "vessel_id")
     Vessel vessel;
 
-    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "voyage_id")
     Voyage voyage;
 
     @NotNull
@@ -78,13 +73,10 @@ public class Booking implements Serializable {
     @NotNull
     String carrier;
 
-    @NotNull
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(insertable = false, updatable = false)
     Long carrierContractNumber;
 
-    @NotNull
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="id")
+    @JoinColumn(name = "allocation_id")
     Allocation allocationId;
 }
