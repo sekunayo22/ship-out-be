@@ -21,5 +21,4 @@ public interface AllocationRouteMapper {
     @Mapping(target = "linkedScheduleEtd", source = "allocationRoute.linkedScheduleEtd")
     @Mapping(target = "linkedScheduleEta", source = "allocationRoute.linkedScheduleEta")
     AllocationRouteDto toDto(AllocationRoute allocationRoute);
-    AllocationRoute toEntity(AllocationRouteDto allocationRouteDto);
 }

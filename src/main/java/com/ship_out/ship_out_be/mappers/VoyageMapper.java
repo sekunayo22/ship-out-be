@@ -14,5 +14,4 @@ public interface VoyageMapper {
     @Mapping(target = "etd", source = "voyage.vessel.etd")
     @Mapping(target = "serviceString", source = "voyage.serviceString")
     VoyageDto toDto(Voyage voyage);
-    Voyage toEntity(VoyageDto voyageDto);
 }

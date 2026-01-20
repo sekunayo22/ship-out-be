@@ -13,4 +13,6 @@ public class UpdateVesselRequest {
     Integer allocation;
     LocalDateTime etd;
     LocalDateTime eta;
+    LocalDateTime ata;
+    LocalDateTime atd;
 }

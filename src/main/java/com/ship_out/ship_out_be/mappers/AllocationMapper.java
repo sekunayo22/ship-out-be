@@ -17,5 +17,4 @@ public interface AllocationMapper {
     @Mapping(target = "outstandingCommited", source = "allocation.allocationRoute.outstandingCommited")
     @Mapping(target = "id", source = "allocation.id")
     AllocationDto toDto(Allocation allocation);
-    Allocation toEntity(AllocationDto allocationDto);
 }

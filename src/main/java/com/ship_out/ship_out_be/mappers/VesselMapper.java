@@ -25,5 +25,5 @@ public interface VesselMapper {
     @Mapping(target = "atd", source = "vessel.atd")
     VesselDto toDto(Vessel vessel);
     Vessel toEntity(AddVesselRequest addVesselRequest);
-    void updateEntity(Vessel vessel, UpdateVesselRequest updateVesselRequest);
+    Vessel updateEntity(Vessel vessel, UpdateVesselRequest updateVesselRequest);
 }

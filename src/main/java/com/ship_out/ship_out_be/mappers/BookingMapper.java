@@ -29,7 +29,5 @@ public interface BookingMapper {
     @Mapping(target = "lastMileStone", source = "booking.lastMileStone")
     @Mapping(target = "trans", source = "booking.trans")
     @Mapping(target = "etdOrigin", source = "booking.etdOrigin")
-    @Mapping(target = "serviceString", source = "booking.voyage.serviceString")
     BookingDto toDto(Booking booking);
-    Booking toEntity(BookingDto bookingDto);
 }
