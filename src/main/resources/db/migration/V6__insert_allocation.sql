@@ -9,7 +9,7 @@ VALUES
 (7),
 (8),
 (9),
-(10);
+(10),
 (11),
 (12),
 (13),
@@ -19,5 +19,5 @@ VALUES
 (17),
 (18),
 (19),
-(20);
-ON CONFLICT DO NOTHING; 
+(20)
+ON CONFLICT DO NOTHING;
