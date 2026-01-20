@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
@@ -22,16 +21,6 @@ public class AllocationRoute implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id")
     Voyage voyage;
-
-    @NotNull
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="vessel.etd")
-    LocalDateTime linkedScheduleEtd;
-
-    @NotNull
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="vessel.eta")
-    LocalDateTime linkedScheduleEta;
 
     @NotNull
     Integer quantity;

@@ -18,7 +18,7 @@ public interface AllocationRouteMapper {
     @Mapping(target = "outstandingCommited", source = "allocationRoute.outstandingCommited")
     @Mapping(target = "id", source = "allocationRoute.id")
     @Mapping(target = "vessel", source = "allocationRoute.voyage.vessel.name")
-    @Mapping(target = "linkedScheduleEtd", source = "allocationRoute.linkedScheduleEtd")
-    @Mapping(target = "linkedScheduleEta", source = "allocationRoute.linkedScheduleEta")
+    @Mapping(target = "linkedScheduleEtd", source = "allocationRoute.voyage.vessel.etd")
+    @Mapping(target = "linkedScheduleEta", source = "allocationRoute.voyage.vessel.eta")
     AllocationRouteDto toDto(AllocationRoute allocationRoute);
 }
