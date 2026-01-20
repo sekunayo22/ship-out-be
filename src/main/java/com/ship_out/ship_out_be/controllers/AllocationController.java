@@ -18,6 +18,6 @@ public class AllocationController {
     public ResponseEntity<List<AllocationDto>> getAllAllocations() {
         List<AllocationDto> allocationDTOs = allocationService.getAllAllocations();
         return ResponseEntity.ok()
-                .body(new HttpStatusResponse(HttpStatus.OK, "Allocations fetched successfully", allocationDTOs));
+                .body(allocationDTOs);
     }
 }

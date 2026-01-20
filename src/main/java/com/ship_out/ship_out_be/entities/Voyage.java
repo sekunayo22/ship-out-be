@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.UUID;
 
-@Entity
+@Data
 @Table(name="voyage")
 @NoArgsConstructor
-@Entity
+@Entity 
 public class Voyage implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.UUID)

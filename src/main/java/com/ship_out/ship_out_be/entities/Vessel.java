@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
@@ -41,6 +42,9 @@ public class Vessel implements Serializable {
     @NotNull
     LocalDateTime eta;
 
+    @NotNull
     LocalDateTime ata;
+
+    @NotNull
     LocalDateTime atd;
 }

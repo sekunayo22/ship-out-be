@@ -8,6 +8,7 @@ public record AllocationDto(
     String unit,
     Integer utilization,
     Integer outstandingCommited,
-    Integer etdWeek
+    Integer etdWeek,
+    String voyage
 ) {
 }

@@ -8,10 +8,12 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.UUID;
 
+import com.ship_out.ship_out_be.enums.ContainerEnum;
+
 @Data
-@Table(name="booking")
 @NoArgsConstructor
 @Entity
+@Table(name="booking")
 public class Booking implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.UUID)
@@ -48,9 +50,6 @@ public class Booking implements Serializable {
 
     @NotNull
     String receiveAgent;
-
-    @NotNull
-    String destination;
 
     @NotNull
     String destination;

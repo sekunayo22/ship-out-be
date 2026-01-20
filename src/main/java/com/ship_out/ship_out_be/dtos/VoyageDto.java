@@ -5,6 +5,7 @@ import java.util.UUID;
 public record VoyageDto(
     String serviceString, 
     UUID id, 
-    VesselDto vessel 
+    String name, 
+    Integer etd
 ) {
 }

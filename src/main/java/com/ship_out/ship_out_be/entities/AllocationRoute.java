@@ -6,15 +6,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-@Table(name="allocation_route")
 @NoArgsConstructor
 @Entity
+@Table(name = "allocation_route")
 public class AllocationRoute implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.UUID)
     UUID id;
 
     @NotNull
@@ -25,12 +26,12 @@ public class AllocationRoute implements Serializable {
     @NotNull
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="vessel.etd")
-    linkedScheduleEtd;
+    LocalDateTime linkedScheduleEtd;
 
     @NotNull
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="vessel.eta")
-    linkedScheduleEta;
+    LocalDateTime linkedScheduleEta;
 
     @NotNull
     Integer quantity;
@@ -38,7 +39,7 @@ public class AllocationRoute implements Serializable {
     @NotNull
     String unit;
 
-    @NotNull;
+    @NotNull
     Integer utilization;
 
     @NotNull

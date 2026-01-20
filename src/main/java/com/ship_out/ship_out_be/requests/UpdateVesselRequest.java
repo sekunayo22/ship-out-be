@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import lombok.Data;
 
 @Data
-public class AddVesselRequest {
+public class UpdateVesselRequest {
     String name;
     String loop;
     String port;

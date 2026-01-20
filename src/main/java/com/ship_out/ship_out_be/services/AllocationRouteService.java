@@ -1,17 +1,20 @@
 package com.ship_out.ship_out_be.services;
 
 
-import com.ship_out.ship_out_be.dtos.VesselDto;
-import com.ship_out.ship_out_be.requests.AddVesselRequest;
-import com.ship_out.ship_out_be.repositories.VesselRepository;
+import com.ship_out.ship_out_be.dtos.AllocationRouteDto;
+import com.ship_out.ship_out_be.entities.AllocationRoute;
+import com.ship_out.ship_out_be.repositories.AllocationRouteRepository;
+import com.ship_out.ship_out_be.mappers.AllocationRouteMapper;
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-   public class AllocationRouteService {
-    @Autowired
-    private AllocationRouteRepository allocationRouteRepository;
+public class AllocationRouteService {
+    private final AllocationRouteRepository allocationRouteRepository;
     private final AllocationRouteMapper allocationRouteMapper;
 
     public AllocationRouteDto getAllocationRouteById(UUID id){

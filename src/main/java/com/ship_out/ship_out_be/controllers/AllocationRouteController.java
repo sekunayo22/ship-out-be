@@ -18,6 +18,6 @@ public class AllocationRouteController {
     public ResponseEntity<List<AllocationRouteDto>> getAllAllocationRoutes() {
         List<AllocationRouteDto> allocationRouteDTOs = allocationRouteService.getAllAllocationRoutes();
         return ResponseEntity.ok()
-                .body(new HttpStatusResponse(HttpStatus.OK, "Allocation routes fetched successfully", allocationRouteDTOs));
+                .body(allocationRouteDTOs);
     }
 }

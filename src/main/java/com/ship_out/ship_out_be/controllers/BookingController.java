@@ -18,6 +18,6 @@ public class BookingController {
     public ResponseEntity<List<BookingDto>> getAllBookings() {
         List<BookingDto> bookingDTOs = bookingService.getAllBookings();
         return ResponseEntity.ok()
-                .body(new HttpStatusResponse(HttpStatus.OK, "Bookings fetched successfully", bookingDTOs));
+                .body(bookingDTOs);
     }
 }

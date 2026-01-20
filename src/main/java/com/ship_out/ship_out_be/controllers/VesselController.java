@@ -2,18 +2,17 @@ package com.ship_out.ship_out_be.controllers;
 
 import com.ship_out.ship_out_be.dtos.VesselDto;
 import com.ship_out.ship_out_be.requests.AddVesselRequest;
+import com.ship_out.ship_out_be.requests.UpdateVesselRequest;
 import com.ship_out.ship_out_be.services.VesselService;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
-import org.springframework.core.io.InputStreamResource;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 @RequiredArgsConstructor
