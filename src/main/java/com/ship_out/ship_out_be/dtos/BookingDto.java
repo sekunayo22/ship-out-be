@@ -10,7 +10,7 @@ public record BookingDto(
     String lastMileStone,
     String trans,
     ContainerEnum containerType,
-    UUID masterBill,
+    Long masterBill,
     String loading,
     String discharge,
     String sendAgent,
@@ -22,8 +22,8 @@ public record BookingDto(
     Integer teu,
     Integer shipCount,
     String carrier,
-    String carrierContractNumber,
-    String allocationId,
+    Long carrierContractNumber,
+    UUID allocationId,
     UUID id
 ) {
 }

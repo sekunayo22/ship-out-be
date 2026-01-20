@@ -36,8 +36,9 @@ public class Booking implements Serializable {
     ContainerEnum containerType;
 
     @NotNull
+    @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    UUID masterBill;
+    Long masterBill;
 
     @NotNull
     String loading;
@@ -77,8 +78,9 @@ public class Booking implements Serializable {
     String carrier;
 
     @NotNull
+    @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    String carrierContractNumber;
+    Long carrierContractNumber;
 
     @NotNull
     @OneToOne(cascade = CascadeType.ALL)
