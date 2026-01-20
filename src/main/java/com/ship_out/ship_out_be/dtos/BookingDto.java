@@ -6,7 +6,7 @@ import com.ship_out.ship_out_be.enums.ContainerEnum;
 
 public record BookingDto(
     String etdOrigin,
-    String reference,
+    Long reference,
     String lastMileStone,
     String trans,
     ContainerEnum containerType,

@@ -23,8 +23,9 @@ public class Booking implements Serializable {
     String etdOrigin;
 
     @NotNull
+    @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    String reference;
+    Long reference;
 
     @NotNull
     String lastMileStone;
