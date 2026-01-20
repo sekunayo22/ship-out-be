@@ -1,5 +1,5 @@
 # Start from a lightweight Java 21 image
-FROM FROM eclipse-temurin:21-jdk-jammy
+FROM eclipse-temurin:21-jdk-jammy
 
 
 # Set working directory
