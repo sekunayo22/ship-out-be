@@ -34,6 +34,7 @@ dependencies {
 	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
+	annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-data-jpa-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-jdbc-test")
 	testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
