@@ -23,6 +23,7 @@ public record BookingDto(
     Integer shipCount,
     String carrier,
     String carrierContractNumber,
-    String allocationId
+    String allocationId,
+    UUID id
 ) {
 }
