@@ -32,6 +32,7 @@ dependencies {
 	compileOnly("org.mapstruct:mapstruct:1.6.2")
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.2")
 	compileOnly("org.projectlombok:lombok")
+	implementation("org.flywaydb:flyway-core")
 	runtimeOnly("org.postgresql:postgresql")
 	annotationProcessor("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok-mapstruct-binding:0.2.0")

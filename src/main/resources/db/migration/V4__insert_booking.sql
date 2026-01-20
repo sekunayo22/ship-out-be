@@ -1,0 +1,40 @@
+INSERT INTO booking (
+    last_mile_stone,
+    trans,
+    container_type,
+    master_bill,
+    loading,
+    discharge,
+    send_agent,
+    receive_agent,
+    destination,
+    container_count,
+    teu,
+    ship_count,
+    carrier,
+    vessel_id,
+    voyage_id,
+    allocation_id
+)
+VALUES
+('Booked', 'Sea', 'FCL', 'Ningbo Port', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 2, 4, 1, 'COSCO', 1, 1, 1),
+('Booked', 'Sea', 'FCL' , 'Yantian', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 2, 1, 'Maersk', 2, 2, 2),
+('Booked', 'Sea', 'FCL', 'Shanghai', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 3, 5, 1, 'Hapag-Lloyd', 3, 3, 3),
+('Booked', 'Sea', 'FCL', 'Ningbo', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 2, 1, 'ONE', 4, 4, 4),
+('Booked', 'Sea', 'FCL', 'Yantian', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 2, 3, 2, 'MSC', 5, 5, 5),
+('Booked', 'Sea', 'FCL', 'Shanghai', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 4, 8, 1, 'ZIM', 6, 6, 6),
+('Booked', 'Sea', 'FCL', 'Ningbo', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 2, 1, 'Evergreen', 7, 7, 7),
+('Booked', 'Sea', 'FCL', 'Yantian', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 2, 4, 1, 'CMA-CGM', 8, 8, 8),
+('Booked', 'Sea', 'FCL', 'Shanghai', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 1, 1, 'KMTC', 9, 9, 9),
+('Booked', 'Sea', 'FCL', 'Ningbo', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 3, 6, 1, 'Maersk', 10, 10, 10);
+('Booked', 'Sea', 'FCL', 'Ningbo Port', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 2, 4, 1, 'COSCO', 11, 11, 11),
+('Booked', 'Sea', 'FCL', 'Yantian', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 2, 1, 'Maersk', 12, 12, 12),
+('Booked', 'Sea', 'FCL', 'Shanghai', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 3, 5, 1, 'Hapag-Lloyd', 13, 13, 13),
+('Booked', 'Sea', 'FCL', 'Ningbo', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 2, 1, 'ONE', 14, 14, 14),
+('Booked', 'Sea', 'FCL', 'Yantian', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 2, 3, 2, 'MSC', 15, 15, 15),
+('Booked', 'Sea', 'FCL', 'Shanghai', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 4, 8, 1, 'ZIM', 16, 16, 16),
+('Booked', 'Sea', 'FCL', 'Ningbo', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 2, 1, 'Evergreen', 17, 17, 17),
+('Booked', 'Sea', 'FCL', 'Yantian', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 2, 4, 1, 'CMA-CGM', 18, 18, 18),
+('Booked', 'Sea', 'FCL', 'Shanghai', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 1, 1, 1, 'KMTC', 19, 19, 19),
+('Booked', 'Sea', 'FCL', 'Ningbo', 'Lagos', 'VM China', 'VM Lagos', 'Lagos', 3, 6, 1, 'Maersk', 20, 20, 20);
+ON CONFLICT DO NOTHING;

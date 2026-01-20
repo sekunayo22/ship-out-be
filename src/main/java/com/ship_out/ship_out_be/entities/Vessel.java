@@ -42,9 +42,7 @@ public class Vessel implements Serializable {
     @NotNull
     LocalDateTime eta;
 
-    @NotNull
     LocalDateTime ata;
 
-    @NotNull
     LocalDateTime atd;
 }

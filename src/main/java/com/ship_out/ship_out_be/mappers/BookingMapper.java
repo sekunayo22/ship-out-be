@@ -2,8 +2,10 @@ package com.ship_out.ship_out_be.mappers;
 
 import com.ship_out.ship_out_be.dtos.BookingDto;
 import com.ship_out.ship_out_be.entities.Booking;
+import com.ship_out.ship_out_be.entities.Vessel;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
 
 @Mapper(componentModel = "spring")
@@ -28,6 +30,14 @@ public interface BookingMapper {
     @Mapping(target = "reference", source = "booking.reference")
     @Mapping(target = "lastMileStone", source = "booking.lastMileStone")
     @Mapping(target = "trans", source = "booking.trans")
-    @Mapping(target = "etdOrigin", source = "booking.etdOrigin")
+    @Mapping(target = "etdOrigin", source = "booking.vessel", qualifiedByName = "setEtdOrigin")
     BookingDto toDto(Booking booking);
+
+    @Named("setEtdOrigin")
+    default String setEtdOrigin(Vessel vessel) {
+        if (vessel == null) {
+            return null;
+        }
+        return vessel.getEtdWeek() + " " + vessel.getPort();
+    }
 }
