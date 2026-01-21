@@ -3,7 +3,6 @@ package com.ship_out.ship_out_be.controllers;
 import com.ship_out.ship_out_be.dtos.BookingDto;
 import com.ship_out.ship_out_be.services.BookingService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity; 
 import org.springframework.web.bind.annotation.*;
 
