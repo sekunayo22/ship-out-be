@@ -18,7 +18,8 @@ public class Vessel implements Serializable {
     @GeneratedValue(strategy=GenerationType.UUID)
     UUID id;
 
-    @Lob
+    @NotNull
+    @Column(length = 255)
     String name;
 
     @NotNull
