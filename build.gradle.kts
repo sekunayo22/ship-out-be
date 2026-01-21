@@ -32,8 +32,8 @@ dependencies {
 	compileOnly("org.mapstruct:mapstruct:1.6.2")
 	annotationProcessor("org.mapstruct:mapstruct-processor:1.6.2")
 	compileOnly("org.projectlombok:lombok")
-	implementation("org.flywaydb:flyway-core:12.6.0")
-    implementation("org.flywaydb:flyway-database-postgresql:12.6.0")
+	implementation("org.flywaydb:flyway-core:11.20.0")
+    implementation("org.flywaydb:flyway-database-postgresql:11.20.0")
     implementation("org.springframework.boot:spring-boot-starter-flyway") {
         exclude(group = "org.flywaydb", module = "flyway-core")
     }
