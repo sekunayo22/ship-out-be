@@ -18,7 +18,7 @@ COPY src src
 RUN chmod +x gradlew
 
 # Build the fat JAR
-RUN ./gradlew clean bootJar --refresh-dependencies --no-daemon
+RUN ./gradlew clean bootJar --refresh-dependencies --no-daemon --stacktrace
 
 # Expose port (Render will map it via $PORT)
 EXPOSE 8080
