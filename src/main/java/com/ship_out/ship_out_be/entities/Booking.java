@@ -18,7 +18,6 @@ public class Booking implements Serializable {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     Long id;
 
-    @NotNull
     String etdOrigin;
 
     @Column(insertable = false, updatable = false)
