@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Data
 @Table(name="vessel")
@@ -15,8 +14,8 @@ import java.util.UUID;
 @Entity
 public class Vessel implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.UUID)
-    UUID id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
 
     @NotNull
     @Column(length = 255)

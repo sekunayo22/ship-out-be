@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor
@@ -14,8 +13,8 @@ import java.util.UUID;
 @Table(name = "allocation_route")
 public class AllocationRoute implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long id;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "voyage_id")

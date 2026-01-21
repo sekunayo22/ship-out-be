@@ -13,8 +13,8 @@ import java.util.UUID;
 @Entity
 public class Allocation implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.UUID)
-    UUID id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
 
     @ManyToOne
     @JoinColumn(name = "allocation_route_id")

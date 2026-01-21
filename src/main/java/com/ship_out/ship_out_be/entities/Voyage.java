@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 @Data
 @Table(name="voyage")
@@ -14,8 +13,8 @@ import java.util.UUID;
 @Entity 
 public class Voyage implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.UUID)
-    UUID id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
 
     @ManyToOne
     @JoinColumn(name = "vessel_id")

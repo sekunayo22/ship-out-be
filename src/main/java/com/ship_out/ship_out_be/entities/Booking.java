@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 import com.ship_out.ship_out_be.enums.ContainerEnum;
 
@@ -16,8 +15,8 @@ import com.ship_out.ship_out_be.enums.ContainerEnum;
 @Table(name="booking")
 public class Booking implements Serializable {
     @Id
-    @GeneratedValue(strategy=GenerationType.UUID)
-    UUID id;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    Long id;
 
     @NotNull
     String etdOrigin;
