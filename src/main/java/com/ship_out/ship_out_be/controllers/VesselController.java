@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 
 @RequiredArgsConstructor
 @RestController
@@ -27,7 +26,7 @@ public class VesselController {
     }
 
     @GetMapping("/vessel/{id}")
-    public ResponseEntity<VesselDto> getVesselById(@PathVariable UUID id) {
+    public ResponseEntity<VesselDto> getVesselById(@PathVariable Long id) {
         VesselDto vesselDTO = vesselService.getVesselById(id);
         return ResponseEntity.ok()
                 .body(vesselDTO);
@@ -41,14 +40,14 @@ public class VesselController {
     }
 
     @PutMapping("/vessel/{id}")
-    public ResponseEntity<VesselDto> updateVessel(@PathVariable UUID id, @Valid @RequestBody UpdateVesselRequest updateVesselRequest) {
+    public ResponseEntity<VesselDto> updateVessel(@PathVariable Long id, @Valid @RequestBody UpdateVesselRequest updateVesselRequest) {
         VesselDto vesselDTO = vesselService.updateVessel(id, updateVesselRequest);
         return ResponseEntity.ok()
                 .body(vesselDTO);
     }
 
     @DeleteMapping("/vessel/{id}")
-    public ResponseEntity<Void> deleteVessel(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteVessel(@PathVariable Long id) {
         vesselService.deleteVessel(id);
         return ResponseEntity.ok()
                 .body(null);

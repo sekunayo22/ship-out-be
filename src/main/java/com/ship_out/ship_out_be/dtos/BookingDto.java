@@ -1,6 +1,5 @@
 package com.ship_out.ship_out_be.dtos;
 
-import java.util.UUID;
 
 import com.ship_out.ship_out_be.enums.ContainerEnum;
 
@@ -23,7 +22,7 @@ public record BookingDto(
     Integer shipCount,
     String carrier,
     Long carrierContractNumber,
-    UUID allocationId,
-    UUID id
+    Long allocationId,
+    Long id
 ) {
 }

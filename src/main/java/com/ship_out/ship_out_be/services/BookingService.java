@@ -6,7 +6,6 @@ import com.ship_out.ship_out_be.entities.Booking;
 import com.ship_out.ship_out_be.repositories.BookingRepository;
 import com.ship_out.ship_out_be.mappers.BookingMapper;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,7 +16,7 @@ public class BookingService {
     private final BookingRepository bookingRepository;
     private final BookingMapper bookingMapper;
 
-    public BookingDto getBookingById(UUID id){
+    public BookingDto getBookingById(Long id){
         Booking booking = bookingRepository.findById(id).orElseThrow(() -> new RuntimeException("Booking not found"));
         return bookingMapper.toDto(booking);
     }
@@ -26,7 +25,7 @@ public class BookingService {
         List<Booking> bookings = bookingRepository.findAll();
         return bookings.stream().map(bookingMapper::toDto).collect(Collectors.toList());
     }
-    public void deleteBooking(UUID id){
+    public void deleteBooking(Long id){
         Booking booking = bookingRepository.findById(id).orElseThrow(() -> new RuntimeException("Booking not found"));
         bookingRepository.delete(booking);
     }

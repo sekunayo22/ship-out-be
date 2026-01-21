@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -18,7 +17,7 @@ public class AllocationService {
     private AllocationRepository allocationRepository;
 
     private final AllocationMapper allocationMapper;
-    public AllocationDto getAllocationById(UUID id){
+    public AllocationDto getAllocationById(Long id){
         Allocation allocation = allocationRepository.findById(id).orElseThrow(() -> new RuntimeException("Allocation not found"));
         return allocationMapper.toDto(allocation);
     }
@@ -28,7 +27,7 @@ public class AllocationService {
         return allocations.stream().map(allocationMapper::toDto).collect(Collectors.toList());
     }
 
-    public void deleteAllocation(UUID id){
+    public void deleteAllocation(Long id){
         Allocation allocation = allocationRepository.findById(id).orElseThrow(() -> new RuntimeException("Allocation not found"));
         allocationRepository.delete(allocation);
     }

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record AllocationRouteDto(
-    UUID id,
+    Long id,
     String serviceString,
     String voyage,
     String vessel,

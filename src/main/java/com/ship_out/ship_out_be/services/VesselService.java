@@ -9,7 +9,6 @@ import com.ship_out.ship_out_be.mappers.VesselMapper;
 import com.ship_out.ship_out_be.entities.Vessel;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -27,7 +26,7 @@ public class VesselService {
         return vesselMapper.toDto(vessel);
     }   
 
-    public VesselDto getVesselById(UUID id){
+    public VesselDto getVesselById(Long id){
         Vessel vessel = vesselRepository.findById(id).orElseThrow(() -> new RuntimeException("Vessel not found"));
         return vesselMapper.toDto(vessel);
     }
@@ -37,14 +36,14 @@ public class VesselService {
         return vessels.stream().map(vesselMapper::toDto).collect(Collectors.toList());
     }
 
-    public VesselDto updateVessel(UUID id, UpdateVesselRequest updateVesselRequest){
+    public VesselDto updateVessel(Long id, UpdateVesselRequest updateVesselRequest){
         Vessel vessel = vesselRepository.findById(id).orElseThrow(() -> new RuntimeException("Vessel not found"));
         vesselMapper.updateEntity(vessel, updateVesselRequest);
         vesselRepository.save(vessel);
         return vesselMapper.toDto(vessel);
     }
 
-    public void deleteVessel(UUID id){
+    public void deleteVessel(Long id){
         Vessel vessel = vesselRepository.findById(id).orElseThrow(() -> new RuntimeException("Vessel not found"));
         vesselRepository.delete(vessel);
     }

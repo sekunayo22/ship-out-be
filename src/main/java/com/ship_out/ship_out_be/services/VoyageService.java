@@ -6,7 +6,6 @@ import com.ship_out.ship_out_be.repositories.VoyageRepository;
 import com.ship_out.ship_out_be.mappers.VoyageMapper;
 import com.ship_out.ship_out_be.entities.Voyage;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 import lombok.RequiredArgsConstructor;
@@ -18,7 +17,7 @@ public class VoyageService {
     private final VoyageRepository voyageRepository;
     private final VoyageMapper voyageMapper;
 
-    public VoyageDto getVoyageById(UUID id){
+    public VoyageDto getVoyageById(Long id){
         Voyage voyage = voyageRepository.findById(id).orElseThrow(() -> new RuntimeException("Voyage not found"));
         return voyageMapper.toDto(voyage);
     }
@@ -28,7 +27,7 @@ public class VoyageService {
         return voyages.stream().map(voyageMapper::toDto).collect(Collectors.toList());
     }   
 
-    public void deleteVoyage(UUID id){
+    public void deleteVoyage(Long id){
         Voyage voyage = voyageRepository.findById(id).orElseThrow(() -> new RuntimeException("Voyage not found"));
         voyageRepository.delete(voyage);
     }
